@@ -1,0 +1,76 @@
+\documentclass[12pt,a4paper]{scrartcl} 
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage{misccorr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\begin{document}
+{\LARGE \textit{Вариант 5}}\bigskip
+
+{\LARGE \textit{Тема: Написать калькулятор (четыре арифметических операции с возможностью их запоминания) – аналог стандартного калькулятора Windows.}}
+			
+\section{Ход работы}
+\label{sec:exp}
+
+\subsection{Код приложения}
+\label{sec:exp:code}
+\begin{verbatim}
+while True:
+    print ('Введите первое число ')
+    a = float(input ())
+
+    print ('Введите второе число ')
+    b = float(input ())
+
+    print ('Выбирите опирацию')
+    print ('1 - (a + b)')
+    print ('2 - (a ^ b)')
+    print ('3 - (a * b)')
+    print ('4 - (a : b)')
+    d = float(input ())
+
+    if d==1:
+        print('а + b =',a+b)
+
+    if d==2:
+        print('a ^ b =',a**b)
+
+    if d==3:
+        print('a * b =',a*b)
+
+    if d==4:
+        print('a : b =',a/b)
+        
+
+    print('Выйти ? : 1 - да , 2 - нет ')
+    i = float(input ()) 
+    
+    if  i==1:
+        break
+\end{verbatim}
+
+
+\section{Код в работающем состоянии}
+\label{sec:picexample}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{128.png}
+	\caption{Код}\label{fig:par}
+\end{figure}
+Работа кода представлена на рис.~\ref{fig:par}.
+
+\section{Библиографические ссылки}
+
+Для изучения «внутренностей» \TeX{} необходимо 
+изучить~\cite{andreyolegovich}, а для изучения Get лучше
+почитать~\cite{proglib.io}.Чтобы понять как работает калькулятор в pythone, нужно обратится к~\cite{youtube}. 
+
+\begin{thebibliography}{9}
+\bibitem{andreyolegovich}Изучение \LaTeX{}.https://losst.ru/kak-polzovatsya-latex
+\bibitem{proglib.io}Изучение Get. https://proglib.io/p/git-for-half-an-hour/    
+\bibitem{youtube}Калькулятор. https://all-python.ru/primery/kalkulyator.html
+\end{thebibliography}
+
+\end{document}
+
